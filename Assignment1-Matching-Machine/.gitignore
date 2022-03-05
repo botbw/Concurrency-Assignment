@@ -1,0 +1,8 @@
+engine
+client
+*.o
+/.deps
+.vscode
+output.txt
+warning.txt
+*.input

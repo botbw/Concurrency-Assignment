@@ -1,0 +1,15 @@
+S 100 AAAA 30 10 # order 100 arrives first, add to book
+B 105 AAAA 20 1 # order 105, no match: price less than 100, add to book
+S 102 AAAA 50 20 # order 102, no match: 105 price less than 102, add to book
+S 110 AAAA 30 20 # order 110, no match: 105 price less than 110, add to book
+E 105 184 1 AAAA 20 1 # order 184: match 105, 105's count is 1
+S 184 AAAA 20 9 # rest of order 184: add to book
+E 100 107 1 AAAA 30 10 # order 107: match order (100, 110, 184 in arrival time order)
+E 110 107 2 AAAA 30 20 # increase execution order id
+E 184 107 3 AAAA 20 2 
+X 100 R
+X 110 R
+X 102 A # only 102 is not matched
+X 184 R
+X 107 R
+X 105 R

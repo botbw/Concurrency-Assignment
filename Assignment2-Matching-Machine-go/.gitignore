@@ -1,0 +1,8 @@
+engine
+client
+*.o
+/.deps
+.idea
+*.input
+output.txt
+warning.txt
